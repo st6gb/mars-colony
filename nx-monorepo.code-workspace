@@ -1,0 +1,23 @@
+{
+  "folders": [
+    {
+      "name": "📦 ROOT",
+      "path": "."
+    },
+    {
+      "name": "🚀 Frontend App",
+      "path": "apps/frontend"
+    },
+    {
+      "name": "⚙️ Backend API",
+      "path": "apps/api"
+    },
+    {
+      "name": "🧩 Shared UI",
+      "path": "libs/shared-types"
+    }
+  ],
+    "settings": {
+    "js/ts.tsdk.path": "node_modules/typescript/lib"
+  }
+}
