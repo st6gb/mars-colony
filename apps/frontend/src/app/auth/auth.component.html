@@ -1,0 +1,22 @@
+<form nz-form [formRoot]="loginForm" class="login-form" novalidate>
+  <h3>Login Form</h3>
+  <nz-form-item>
+    <nz-form-control [nzErrorTip]="loginForm.userName().errors()[0]?.message">
+      <nz-input-wrapper>
+        <nz-icon nzInputPrefix nzType="user" />
+        <input nz-input placeholder="userName" [formField]="loginForm.userName" />
+      </nz-input-wrapper>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzErrorTip]="loginForm.password().errors()[0]?.message">
+      <nz-input-wrapper>
+        <nz-icon nzInputPrefix nzType="lock" />
+        <input nz-input placeholder="password" [formField]="loginForm.password" />
+      </nz-input-wrapper>
+    </nz-form-control>
+  </nz-form-item>
+  <button nz-button nzType="primary" type="submit">Login</button>
+
+  <p>Don't have an account? <a routerLink="/registration">Sign up</a></p>
+</form>

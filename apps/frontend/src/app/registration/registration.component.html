@@ -1,0 +1,46 @@
+<form nz-form [formRoot]="registrationForm" class="registration-form " novalidate>
+  <h3>Registration Form</h3>
+  <nz-form-item>
+    <nz-form-control [nzErrorTip]="registrationForm.FirstName().errors()[0]?.message">
+      <nz-input-wrapper>
+        <nz-icon nzInputPrefix nzType="user" />
+        <input nz-input placeholder="First Name" [formField]="registrationForm.FirstName" />
+      </nz-input-wrapper>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzErrorTip]="registrationForm.LastName().errors()[0]?.message">
+      <nz-input-wrapper>
+        <nz-icon nzInputPrefix nzType="user" />
+        <input nz-input placeholder="Last Name" [formField]="registrationForm.LastName" />
+      </nz-input-wrapper>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzErrorTip]="registrationForm.Email().errors()[0]?.message">
+      <nz-input-wrapper>
+        <nz-icon nzInputPrefix nzType="mail" />
+        <input nz-input placeholder="Email" [formField]="registrationForm.Email" />
+      </nz-input-wrapper>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzErrorTip]="registrationForm.PhoneNumber().errors()[0]?.message">
+      <nz-input-wrapper>
+        <nz-icon nzInputPrefix nzType="phone" />
+        <input nz-input placeholder="Phone Number" [formField]="registrationForm.PhoneNumber" />
+      </nz-input-wrapper>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzErrorTip]="registrationForm.Password().errors()[0]?.message">
+      <nz-input-wrapper>
+        <nz-icon nzInputPrefix nzType="lock" />
+        <input nz-input placeholder="Password" [formField]="registrationForm.Password" />
+      </nz-input-wrapper>
+    </nz-form-control>
+  </nz-form-item>
+  <button nz-button nzType="primary" type="submit">Register</button>
+
+  <p>Have an account? <a routerLink="/auth">Sign in</a></p>
+</form>
